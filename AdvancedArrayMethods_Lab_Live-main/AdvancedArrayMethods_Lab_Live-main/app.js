@@ -184,31 +184,47 @@ let dishes = [
 //Filter
 
 
-function problemThree(dishList, servingSize){
-    let result;
-    result = dishList.filter(function(element){
-        if(element.cuisine === "Italian" && element.servings > servingSize){
-            return true;
-        }
-        else{
-            return false;
-        }})
-    return result;
-}
+// function problemThree(dishList, servingSize){
+//     let result;
+//     result = dishList.filter(function(element){
+//         if(element.cuisine === "Italian" && element.servings > servingSize){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }})
+//     return result;
+// }
 
-italianAndServings = problemThree(dishes, 5);
-console.log("Italian with serving size greater than 5", italianAndServings)
+// italianAndServings = problemThree(dishes, 5);
+// console.log("Italian with serving size greater than 5", italianAndServings)
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
 
+function probFour(){
+    let result;
+    result = dishes.filter(function(element){
+        if(element.id === element.servings){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    return result;
+}
 
+idMatchesServings = probFour();
+console.log("Foods that id matches serving size: ", idMatchesServings)
 
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
+
+
 
 
 
