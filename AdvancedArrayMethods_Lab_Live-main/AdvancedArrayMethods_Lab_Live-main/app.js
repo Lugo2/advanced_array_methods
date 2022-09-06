@@ -139,26 +139,42 @@ let dishes = [
 //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
 //Filter
 
-function problemOne(){
+// function problemOne(){
 
-    let results;
-    results = dishes.filter(function(element){
-        if(element.cuisine === "Vegetarian"){
+//     let results;
+//     results = dishes.filter(function(element){
+//         if(element.cuisine === "Vegetarian"){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+// let veggieFood = problemOne();
+// console.log("Vegetarian dishes: ", veggieFood)
+
+//2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
+//Filter
+
+function problemTwo(){
+    let userCuisineResults;
+    userCuisineInput = prompt("From what type of cuisine would you like your dish to be today? Vietnamese, Hungarian, Vegetarian, Irish, French, Mexican, Italian?")
+    userCuisineResults = dishes.filter(function(element){
+        
+        if(element.cuisine === userCuisineInput){
             return true;
         }
         else{
             return false;
         }
     })
-    return results;
+    return userCuisineResults;
 }
- let veggieFood = problemOne();
- console.log("Vegetarian dishes: ", veggieFood)
-
-//2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
-//Filter
-
-
+    
+let userCuisineOptions = problemTwo();
+console.log("Based on your cuisine selection, your dish options are: ", userCuisineOptions)
 
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
