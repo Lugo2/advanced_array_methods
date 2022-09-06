@@ -204,28 +204,41 @@ let dishes = [
 //Filter
 
 
-function probFour(){
-    let result;
-    result = dishes.filter(function(element){
-        if(element.id === element.servings){
-            return true;
-        }
-        else{
-            return false;
-        }
-    })
-    return result;
-}
+// function probFour(){
+//     let result;
+//     result = dishes.filter(function(element){
+//         if(element.id === element.servings){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return result;
+// }
 
-idMatchesServings = probFour();
-console.log("Foods that id matches serving size: ", idMatchesServings)
+// idMatchesServings = probFour();
+// console.log("Foods that id matches serving size: ", idMatchesServings)
 
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
 
 
+function pFive(){
+    let evenNumber = dishes.filter(function(element){
+        if(element.servings % 2 == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    return evenNumber;
+}
 
+evenServings = pFive();
+console.log("Dishes w/even serving size: ", evenServings)
 
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
