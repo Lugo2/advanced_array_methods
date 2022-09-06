@@ -139,6 +139,7 @@ let dishes = [
 //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
 //Filter
 
+
 // function problemOne(){
 
 //     let results;
@@ -155,34 +156,54 @@ let dishes = [
 // let veggieFood = problemOne();
 // console.log("Vegetarian dishes: ", veggieFood)
 
+
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
 
-function problemTwo(){
-    let userCuisineResults;
-    userCuisineInput = prompt("From what type of cuisine would you like your dish to be today? Vietnamese, Hungarian, Vegetarian, Irish, French, Mexican, Italian?")
-    userCuisineResults = dishes.filter(function(element){
+
+// function problemTwo(){
+//     let userCuisineResults;
+//     userCuisineInput = prompt("From what type of cuisine would you like your dish to be today? Vietnamese, Hungarian, Vegetarian, Irish, French, Mexican, Italian?")
+//     userCuisineResults = dishes.filter(function(element){
         
-        if(element.cuisine === userCuisineInput){
-            return true;
-        }
-        else{
-            return false;
-        }
-    })
-    return userCuisineResults;
-}
+//         if(element.cuisine === userCuisineInput){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return userCuisineResults;
+// }
     
-let userCuisineOptions = problemTwo();
-console.log("Based on your cuisine selection, your dish options are: ", userCuisineOptions)
+// let userCuisineOptions = problemTwo();
+// console.log("Based on your cuisine selection, your dish options are: ", userCuisineOptions)
+
 
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
 
 
+function problemThree(dishList, servingSize){
+    let result;
+    result = dishList.filter(function(element){
+        if(element.cuisine === "Italian" && element.servings > servingSize){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    return result;
+}
+
+italianAndServings = problemThree(dishes, 5);
+console.log("Italian with serving size greater than 5", italianAndServings)
+
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
+
+
 
 
 
