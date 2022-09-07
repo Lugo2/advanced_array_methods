@@ -267,25 +267,33 @@ let dishes = [
 //Filter
 
 
-function pSeven(){
-    userInput = prompt("What type of ingredient would you like for your dish? Maybe beef, ginger, tomato, chickpea, parsley? What about cheese, cabbage, flour, sugar, corn?")
-    let ingredient = dishes.filter(function(element){
-        if(element.ingredients.includes(userInput)){
-            return true;
-        }
-        else{
-            return false;
-        }
-    })
-    return ingredient;
-}
-dishesWithIngredient = pSeven();
-console.log("Dish options that include your ingredient: ", dishesWithIngredient)
+// function pSeven(){
+//     userInput = prompt("What type of ingredient would you like for your dish? Maybe beef, ginger, tomato, chickpea, parsley? What about cheese, cabbage, flour, sugar, corn?")
+//     let ingredient = dishes.filter(function(element){
+//         if(element.ingredients.includes(userInput)){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return ingredient;
+// }
+// dishesWithIngredient = pSeven();
+// console.log("Dish options that include your ingredient: ", dishesWithIngredient)
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
+
+function pEight(){
+    let cuisineTypes = dishes.map(function(element){
+        return element.cuisine;
+    })
+    return cuisineTypes;
+}
+console.log(pEight());
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
