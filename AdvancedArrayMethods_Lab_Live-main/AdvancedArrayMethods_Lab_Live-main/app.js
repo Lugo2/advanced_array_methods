@@ -300,20 +300,32 @@ let dishes = [
 //Map 
 
 
-function pNine(){
-    let concatenatedStrings = dishes.map(function(element){
-        return element.cuisine + " " + element.name;
-    })
-    return concatenatedStrings;
-}
-console.log(pNine());
+// function pNine(){
+//     let concatenatedStrings = dishes.map(function(element){
+//         return element.cuisine + " " + element.name;
+//     })
+//     return concatenatedStrings;
+// }
+// console.log(pNine());
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
 
-
-
+function pTen(){
+    let vegDishes = dishes.filter(function(element){
+        
+        if(element.cuisine === "Vegetarian"){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    })
+    return vegDishes;
+}
+console.log(pTen());
 
 //BONUS
 
