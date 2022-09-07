@@ -108,7 +108,7 @@ let dishes = [
         "name": "Pho",
         "cuisine": "Vietnamese",
         "servings": 4,
-        "ingredients": ["beef", "ginger"]
+        "ingredients": ["beef", "ginger"] 
     },
 ]
 
@@ -247,9 +247,30 @@ let dishes = [
 //Filter
 
 
-function pSix(){
+// function pSix(){
+//     let ingredient = dishes.filter(function(element){
+//         if(element.ingredients.includes("chickpea")){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return ingredient;
+// }
+
+// chickpeaInIngredients = pSix();
+// console.log(chickpeaInIngredients)
+
+
+//7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
+//Filter
+
+
+function pSeven(){
+    userInput = prompt("What type of ingredient would you like for your dish? Maybe beef, ginger, tomato, chickpea, parsley? What about cheese, cabbage, flour, sugar, corn?")
     let ingredient = dishes.filter(function(element){
-        if(element.ingredients.includes("chickpea")){
+        if(element.ingredients.includes(userInput)){
             return true;
         }
         else{
@@ -258,14 +279,8 @@ function pSix(){
     })
     return ingredient;
 }
-
-chickpeaInIngredients = pSix();
-console.log(chickpeaInIngredients)
-
-
-//7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
-//Filter
-
+dishesWithIngredient = pSeven();
+console.log("Dish options that include your ingredient: ", dishesWithIngredient)
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
