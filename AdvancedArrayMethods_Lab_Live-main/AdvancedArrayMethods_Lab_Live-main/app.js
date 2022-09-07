@@ -287,18 +287,26 @@ let dishes = [
 //Map
 
 
-function pEight(){
-    let cuisineTypes = dishes.map(function(element){
-        return element.cuisine;
-    })
-    return cuisineTypes;
-}
-console.log(pEight());
+// function pEight(){
+//     let cuisineTypes = dishes.map(function(element){
+//         return element.cuisine;
+//     })
+//     return cuisineTypes;
+// }
+// console.log(pEight());
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
 
+
+function pNine(){
+    let concatenatedStrings = dishes.map(function(element){
+        return element.cuisine + " " + element.name;
+    })
+    return concatenatedStrings;
+}
+console.log(pNine());
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
